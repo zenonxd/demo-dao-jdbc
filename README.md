@@ -1,5 +1,5 @@
 PONTOS IMPORTANTES A SEREM LEMBRADOS.
-### Quando usamos o get so resultset é para pegarmos dado da tabela SQL. Se coluna que queremos é a coluna de Id, então será um rs.getInt(nome da coluna). ###
+### Quando usamos o get do resultset é para pegarmos dado da tabela SQL. Se coluna que queremos é a coluna de Id, então será um rs.getInt(nome da coluna). ###
 
 
 Para cada entidade do negocio, existirá um objeto responsável por fazer acesso a dados relacionados a esta entidade.
