@@ -216,17 +216,14 @@ Implementação no programa inicial:
 	
 Só será usado o PreparedStatement novamente, pois é uma operação Update!
 
-![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/38cbed7f-664d-4685-a471-f09291584c88)
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/1ab96545-d895-4320-9880-339e71cb7b5b)
 
 Usamos novamente o Statement.RETURN_GENERATED_KEYS depois de inserir os dados do placeholder (?), para retornar a Id do seller inserido.
 
-![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/0e563374-81e4-4670-b983-13e994eafa17)
 
 Usaremos um st.executeUpdate(), visto que como foi dito acima, é uma operação update. Se fosse delete e insert ou delete, seria a mesma coisa. 
 
 As outras operações são executeQuery pois irão retornar um objeto resultSet.
-
-![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/3e5da71b-d921-445e-887e-7636414b720d)
 
 Dessa vez, não precisamos usar ifs nem nada. É so uma atualização.
 
@@ -242,4 +239,38 @@ Pegamos o objeto seller ja instanciado acima, buscamos um Seller pela ID, trocam
 E pronto!
 </DETAILS>
 
+<h1 align="center">IMPLEMENTANDO MÉTODO delete </h1>
+<h2 align="center"><a href=https://github.com/zenonxd/demo-dao-jdbc/blob/2831d439e831803502a2c6aaa8b05e8941ac2d13/src/model/dao/impl/SellerDaoJDBC.java#L87> Para visualizar o que foi feito abaixo clique aqui! </h2>
+
+<DETAILS>
+	<SUMMARY>delete Implementation</SUMMARY>
+	
+Só será usado o PreparedStatement novamente, pois é uma operação Delete!
+
+
+Usamos novamente o Statement.RETURN_GENERATED_KEYS depois de inserir os dados do placeholder (?), para retornar a Id do seller inserido.
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/0e563374-81e4-4670-b983-13e994eafa17)
+
+Dessa vez o st.setInt() passamos o id do parametro.
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/ba4d2840-0477-47db-9abd-c5ed2f3670dc)
+
+Usaremos um st.executeUpdate(), visto que como foi dito acima, é uma operação delete. Se fosse delete e insert ou update, seria a mesma coisa. 
+
+As outras operações são executeQuery pois irão retornar um objeto resultSet.
+
+
+Dessa vez, não precisamos usar ifs nem nada. É so uma atualização.
+
+Damos o executeUpdate e fim!
+
+Implementação no programa inicial:
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/1f9d89ca-f2fe-412f-af9d-3699026c7b1d)
+
+Pedimos ao usuário para digitar um Id e passamos como parametro no sellerDao.deleteById().
+
+E pronto!
+</DETAILS>
 
