@@ -95,11 +95,13 @@ DENTRO DO METODO FindById:
 
 No bloco if em questão, sabemos que ele só irá prosseguir (true) se houver um numero depois do next (que já começa em zero).
 Caso sim:
+
 	1. Criamos duas funçoes. Uma para o Seller e outra para o Department.
 		a. Na função do Seller, teremos dois parametros (Resultset rs, Department dep)
 		b. Na função deparment, somente o parametro do ResultSet
   
-<h3> A função Seller recebe dois parâmetros pois no final da mesma, devemos instanciar também um Department. </h3>
+<h3> A função instantiateSeller recebe dois parâmetros pois no final da mesma, devemos instanciar também um Department. </h3>
+
 	2. O getInt e getString é a coluna da tabela criada no WorkBench. Ou seja: Int porque irá retornar uma ID da tabela e String pois é retornado um nome. <br>
  	3. SEMPRE QUE DAMOS GET no resultset é pra pegar algo de dentro do SQL. !!! ESSE setId é do objeto e não um set SQL !!!
 	
