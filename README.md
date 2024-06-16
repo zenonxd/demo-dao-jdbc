@@ -156,4 +156,22 @@ Teste final no main:
  
 </DETAILS>
 
+<h1 align="center">IMPLEMENTANDO MÉTODO FindAll </h1>
+<h2 align="center"><a href=https://github.com/zenonxd/demo-dao-jdbc/blob/ba7a302a0a26b238a7f2b6faec21108966912c57/src/model/dao/impl/SellerDaoJDBC.java#L89> Para visualizar o que foi feito abaixo clique aqui! </h2>
+
+<DETAILS>
+	<SUMMARY>findAll Implementation</SUMMARY>
+	
+Será a mesma estrutura do findByDepartment!
+
+Só trocaremos a query digitada e não precisaremos passar o st.setInt pois dessa o vez o select é sem where.
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/91289379-cdd7-493f-a683-a958c1e48d4d)
+
+Implementação no programa inicial:
+
+ ![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/e031c200-4a45-4eaa-8858-475741e7aeeb)
+
+</DETAILS>
+
 
