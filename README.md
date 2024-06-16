@@ -51,12 +51,12 @@ Então no programa principal, instanciamos a interface juntamente com a DaoFacto
 
 </details>
 
-
 <h1 align="center">IMPLEMENTANDO MÉTODO FindById </h1>
 <h2 align="center"><a href=https://github.com/zenonxd/demo-dao-jdbc/blob/main/src/model/dao/impl/SellerDaoJDBC.java> Para visualizar o que foi feito abaixo clique aqui! </h2>
 	
 	 
-
+<DETAILS>
+	<SUMMARY>CLIQUE AQUI</SUMMARY>
 Primeiro, não precisamos dessa vez instanciar uma connection, uma vez que o DAO vai ter uma dependência com a conexão. Portanto: 
 Voltando a classe SellerDaoJDBC
 1. Criamos um atributo
@@ -103,11 +103,10 @@ Caso sim:
  	3. SEMPRE QUE DAMOS GET no resultset é pra pegar algo de dentro do SQL. !!! ESSE setId é do objeto e não um set SQL !!!
 	
 ![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/65c95e2b-ad4b-4a78-a68c-4af66e9ae711)
-
 Por fim, nosso if ficará dessa maneira:
 
 ![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/7df73626-a091-4cd3-a589-b91a94e68306)
-
+</DETAILS>
 
 
 
