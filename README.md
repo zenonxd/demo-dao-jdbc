@@ -174,4 +174,38 @@ Implementação no programa inicial:
 
 </DETAILS>
 
+<h1 align="center">IMPLEMENTANDO MÉTODO insert </h1>
+<h2 align="center"><a href=https://github.com/zenonxd/demo-dao-jdbc/blob/c6fd89cd6d4598212ab3866c57794ca5612bd4b4/src/model/dao/impl/SellerDaoJDBC.java#L21> Para visualizar o que foi feito abaixo clique aqui! </h2>
+
+<DETAILS>
+	<SUMMARY>insert Implementation</SUMMARY>
+	
+Só será usado o PreparedStatement, pois é uma operação Insert!
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/38cbed7f-664d-4685-a471-f09291584c88)
+
+Usamos o Statement.RETURN_GENERATED_KEYS depois de inserir os dados do placeholder (?), para retornar a Id do seller inserido.
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/0e563374-81e4-4670-b983-13e994eafa17)
+
+Usaremos um st.executeUpdate(), visto que como foi dito acima, é uma operação insert. Se fosse delete e update, seria a mesma coisa. 
+
+As outras operações são executeQuery pois irão retornar um objeto resultSet.
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/3e5da71b-d921-445e-887e-7636414b720d)
+
+Usamos rowsAffected > 0 para ter certeza que os dados foram inseridos.
+
+A variavel ResulSet é para armazenamos as generatedKeys.
+
+Após isso, fazer um rs.next, onde pegamos o Id do seller inserido. Armazenamos com o getInt e inserimos dentro do objeto Seller, settando a id.
+
+E finalizamos a conexão com o rs.
+
+Implementação no programa inicial:
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/a11f0798-a0f7-40d5-a07b-1c2f3a75fa35)
+
+</DETAILS>
+
 
