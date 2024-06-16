@@ -208,4 +208,38 @@ Implementação no programa inicial:
 
 </DETAILS>
 
+<h1 align="center">IMPLEMENTANDO MÉTODO update </h1>
+<h2 align="center"><a href=https://github.com/zenonxd/demo-dao-jdbc/blob/0b542dccf963f93a0871ea389885334734c555cf/src/model/dao/impl/SellerDaoJDBC.java#L60> Para visualizar o que foi feito abaixo clique aqui! </h2>
+
+<DETAILS>
+	<SUMMARY>update Implementation</SUMMARY>
+	
+Só será usado o PreparedStatement novamente, pois é uma operação Update!
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/38cbed7f-664d-4685-a471-f09291584c88)
+
+Usamos novamente o Statement.RETURN_GENERATED_KEYS depois de inserir os dados do placeholder (?), para retornar a Id do seller inserido.
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/0e563374-81e4-4670-b983-13e994eafa17)
+
+Usaremos um st.executeUpdate(), visto que como foi dito acima, é uma operação update. Se fosse delete e insert ou delete, seria a mesma coisa. 
+
+As outras operações são executeQuery pois irão retornar um objeto resultSet.
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/3e5da71b-d921-445e-887e-7636414b720d)
+
+Dessa vez, não precisamos usar ifs nem nada. É so uma atualização.
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/df0e5607-0cdf-45a1-b585-3def555afa6b)
+
+Damos o executeUpdate e fim!
+
+Implementação no programa inicial:
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/66bc333b-a18c-46e6-972d-8d3a9701e729)
+
+Pegamos o objeto seller ja instanciado acima, buscamos um Seller pela ID, trocamos o nome dele no Set e chamos o SellerDao.update(passando o seller aqui).
+E pronto!
+</DETAILS>
+
 
