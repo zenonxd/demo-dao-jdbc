@@ -52,7 +52,7 @@ Então no programa principal, instanciamos a interface juntamente com a DaoFacto
 </details>
 
 <h1 align="center">IMPLEMENTANDO MÉTODO FindById </h1>
-<h2 align="center"><a href=https://github.com/zenonxd/demo-dao-jdbc/blob/main/src/model/dao/impl/SellerDaoJDBC.java> Para visualizar o que foi feito abaixo clique aqui! </h2>
+<h2 align="center"><a href=https://github.com/zenonxd/demo-dao-jdbc/blob/f3aaf7e782e855f55d9b806e4fd8497dbd928761/src/model/dao/impl/SellerDaoJDBC.java#L42> Para visualizar o que foi feito abaixo clique aqui! </h2>
 	
 	 
 <DETAILS>
@@ -110,14 +110,50 @@ Caso sim:
 Por fim, nosso if ficará dessa maneira:
 
 ![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/7df73626-a091-4cd3-a589-b91a94e68306)
+
+Teste final no main:
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/05732275-ebf7-4a7a-b151-77042c0cc36d)
+
 </DETAILS>
 
+<h1 align="center">IMPLEMENTANDO MÉTODO FindByDepartment </h1>
+<h2 align="center"><a href=https://github.com/zenonxd/demo-dao-jdbc/blob/f3aaf7e782e855f55d9b806e4fd8497dbd928761/src/model/dao/impl/SellerDaoJDBC.java#L97> Para visualizar o que foi feito abaixo clique aqui! </h2>
 
+<DETAILS>
+	<SUMMARY>findByDepartment Implementation</SUMMARY>
+	
+Primeiramente, é incorreto nós instanciarmos vários departamentos.
+Dessa vez, como são vários valores retornados ao invés de if dentro do método, usaremos while Ou seja, "enquanto existir um próximo (rs.next)".
 
+1. Iniciaremos criando uma Lista fora do loop while.
+   
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/98d548ea-25a0-46b3-9dd0-5be1179b71c1)
 
+A resolução parece boa, mas na verdade é uma má prática pois intanciaremos vários departments.
 
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/dcd40f17-e9fb-40d8-9db8-3d1826eb47a2)
 
+<h3> Para uma boa pratica, usaremos o Map! </h3>
 
+1. Criaremos um map fora do laço while.
+2. Dentro do laço while:
+	a. Criaremos um Department, dando o get na Coluna: Department dep = map.get(rs.getInt("DepartmentId"));
+           Basicamente esse comando busca dentro do Map se ja existe algum departamento com a Id = 2 (valor que está dentro do resultset (rs.next)
+   
+3. Se o dep == null, instanciaremos o dep e colocaremos dentro do Map para que na proxima vez eu possa verificar que ele ja existe.
+   
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/ac721930-12ac-4232-b9ec-e7c34b2801b0)
 
-Após isso, fazer um return null caso o if inicial de false.
+4. Por fim, teremos a instanciação do Seller, passando o rs + dep e adicionando a lista.
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/1d117112-e033-4fbe-8d7a-970918f1e362)
+
+Teste final no main:
+
+![image](https://github.com/zenonxd/demo-dao-jdbc/assets/64092861/46f7da24-2e4a-4d65-b12c-a6581b9915ca)
+
+ 
+</DETAILS>
+
 
